@@ -1,0 +1,31 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    {{/* 必要ならここでだけナビを表示 */}}
+    {{ partial "navbar.html" . }}
+    {{ partial "navbar-clone.html" . }}
+    <h1 class="title">お知らせ一覧</h1>
+
+    {{/* このセクションのページだけを取得 */}}
+    {{ $pages := .Pages }}
+
+    {{ if gt (len $pages) 0 }}
+      <ul>
+        {{ range sort $pages "Date" "desc" }}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              {{ .Date.Format "2006-01-02" }} — {{ .Title }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <p>このセクション（{{ .Section }}）のページが 0 件です。</p>
+    {{ end }}
+      <!-- 任意：「戻る」リンク（トップへ） -->
+    <div class="has-text-right" style="margin-top:1rem;">
+      <a class="button is-light" href="{{ site.Home.RelPermalink }}">トップへ戻る</a>
+    </div>
+  </div>
+</section>
+{{ end }}

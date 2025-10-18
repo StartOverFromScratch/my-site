@@ -4,8 +4,8 @@
     {{ partial "hero.html" . }}
     {{ end }}
 
-    {{ if .Site.Params.section1 }}
-    {{ partial "news.html" . }}
+    {{ if .Site.Params.home.news.enable }}
+    {{ partial "section-news.html" . }}
     {{ end }}
 
     {{ if .Site.Params.section2 }}

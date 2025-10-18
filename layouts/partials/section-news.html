@@ -1,0 +1,52 @@
+{{- $cfg := site.Params.home.news -}}
+{{- if and $cfg $cfg.enable -}}
+
+<section id="{{ or $cfg.sectionId "home-news" }}"
+         class="{{ or $cfg.sectionClass "section" }}">
+  <div class="container">
+    <h2 class="title is-4">{{ or $cfg.title "お知らせ" }}</h2>
+
+    {{/* newsタイプの記事を新しい順に、指定件数だけ */}}
+    {{- $items  := where site.RegularPages "Type" "news" -}}
+    {{- $sorted := sort $items "Date" "desc" -}}
+    {{- $n      := or $cfg.count 5 -}}
+    {{- $latest := first $n $sorted -}}
+
+    {{- if gt (len $latest) 0 -}}
+      <ul class="news-list">
+        {{- range $latest -}}
+          <li class="news-item">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{- if (or (not (isset $cfg "showDate")) $cfg.showDate) -}}
+              <span class="news-date">{{ .Date.Format (or $cfg.dateFormat "2006-01-02") }}</span>
+            {{- end -}}
+          </li>
+        {{- end -}}
+      </ul>
+    {{- else -}}
+      <p>{{ or $cfg.emptyMessage "現在、お知らせはありません。" }}</p>
+    {{- end -}}
+
+    {{- $btnLabel := or $cfg.buttonLabel "お知らせ一覧へ" -}}
+    {{- if $cfg.buttonLink -}}
+      <div class="has-text-right" style="margin-top:1rem;">
+        <a class="button is-link is-light" href="{{ $cfg.buttonLink | safeURL }}">{{ $btnLabel }}</a>
+      </div>
+    {{- else -}}
+      {{- with site.GetPage "section" "news" -}}
+        <div class="has-text-right" style="margin-top:1rem;">
+          <a class="button is-link is-light" href="{{ .RelPermalink }}">{{ $btnLabel }}</a>
+        </div>
+      {{- end -}}
+    {{- end -}}
+  </div>
+</section>
+
+<style>
+.news-list{list-style:none;padding-left:0;margin:0}
+.news-item{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid #eee}
+.news-item a{text-decoration:none}
+.news-date{white-space:nowrap;margin-left:1rem;color:#777;font-size:.9em}
+</style>
+
+{{- end -}}

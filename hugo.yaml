@@ -119,8 +119,21 @@ params:
         url: /
       - text: App settings
         url: /
-  section1:
-    title: お知らせ
+  # section1:
+  #   title: お知らせ
+  home:
+    news:
+      enable: true            # セクションを出す/消す
+      title: "お知らせ"        # 見出し
+      count: 5                # 何件出すか
+      dateFormat: "2006-01-02"
+      emptyMessage: "現在、お知らせはありません。"
+      buttonLabel: "お知らせ一覧へ"
+      buttonLink: "/news/"    # 一覧のURL（セクションページ）
+      sectionId: "home-news"  # <section id="...">
+      sectionClass: "section" # 追加クラス
+      showDate: true          # 日付を表示するか
+
     # subtitle: with great responsibility
     # tiles:
     # - title: App builder
