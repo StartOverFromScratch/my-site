@@ -20,10 +20,8 @@ jobs:
 
       - name: Build
         run: |
-          hugo --minify
-          echo "=== Check public contents ==="
-          ls -la public
-          
+          hugo --minify && ls -la public
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
