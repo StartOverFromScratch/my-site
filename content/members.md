@@ -12,16 +12,16 @@ title = 'メンバー紹介'
   
   <div class="column is-half-tablet is-one-third-desktop has-text-centered">
     <figure class="image is-128x128" style="margin: auto;">
-      <img class="is-rounded" src="/images/members/member1.jpg" alt="メンバー1 写真">
+      <img class="is-rounded" src="/images/members/shinya.png" alt="メンバー1 写真">
     </figure>
-    <p class="is-size-5 mt-3">メンバー1 氏名</p>
+    <p class="is-size-5 mt-3">新屋　智子(Satoko SHINYA)</p>
   </div>
   
   <div class="column is-half-tablet is-one-third-desktop has-text-centered">
     <figure class="image is-128x128" style="margin: auto;">
-      <img class="is-rounded" src="/images/members/member2.jpg" alt="メンバー2 写真">
+      <img class="is-rounded" src="/images/members/takashima.png" alt="メンバー2 写真">
     </figure>
-    <p class="is-size-5 mt-3">メンバー2 氏名</p>
+    <p class="is-size-5 mt-3">高島　真美(Mami TAKASHIMA)</p>
   </div>
 
 </div>
