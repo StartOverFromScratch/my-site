@@ -1,0 +1,25 @@
+<div class="section">
+  <div class="container">
+    <h2 class="title section-title has-text-centered">{{ .title }}</h2>
+
+    <div class="content" style="max-width: 720px; margin: auto;">
+      <ul style="list-style: none; margin-left: 0;">
+
+        {{ range first 5 (where site.RegularPages "Section" "news").ByDate.Reverse }}
+        <li style="border-bottom: 1px solid #dbdbdb; padding: 0.75rem 0;">
+          <span style="margin-right: 1.5rem; color: #555;">
+            {{ .Date.Format "2006/01/02" }}
+          </span>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+
+      </ul>
+
+      <div class="has-text-right mt-4">
+        <a href="/news/" class="button is-link is-outlined">お知らせ一覧へ &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</div>
