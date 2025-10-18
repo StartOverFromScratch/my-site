@@ -14,7 +14,7 @@
         {{ range sort $pages "Date" "desc" }}
           <li>
             <a href="{{ .RelPermalink }}">
-              {{ .Date.Format "2006-01-02" }} — {{ .Title }}
+              {{ .Date.Format "2006/01/02" }} — {{ .Title }}
             </a>
           </li>
         {{ end }}

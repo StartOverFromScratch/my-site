@@ -18,7 +18,7 @@
           <li class="news-item">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             {{- if (or (not (isset $cfg "showDate")) $cfg.showDate) -}}
-              <span class="news-date">{{ .Date.Format (or $cfg.dateFormat "2006-01-02") }}</span>
+              <span class="news-date">{{ .Date.Format (or $cfg.dateFormat "2006/01/02") }}</span>
             {{- end -}}
           </li>
         {{- end -}}
