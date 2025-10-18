@@ -1,0 +1,20 @@
+# Hugoが生成する公開ディレクトリ
+/public/
+
+# Hugoが生成するリソース（Sassキャッシュなど）
+/resources/
+
+# Hugoのビルドロックファイル
+.hugo_build.lock
+
+# Go Modules のベンダーディレクトリ（もし 'go mod vendor' を使った場合）
+/vendor/
+
+# OS固有のファイル (macOS)
+.DS_Store
+
+# OS固有のファイル (Windows)
+Thumbs.db
+
+# エディタの設定ファイル (例: VSCode)
+.vscode/
