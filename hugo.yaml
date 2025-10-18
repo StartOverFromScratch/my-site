@@ -3,7 +3,7 @@ languageCode: ja-jp
 title: 私の研究
 # できれば false のままでOK（baseURL を正しく設定するのが本筋）
 relativeURLs: false
-canonifyURLs: false
+canonifyURLs: true
 
 module:
   # uncomment line below for local development of module
