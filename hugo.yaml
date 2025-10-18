@@ -221,7 +221,7 @@ params:
         title: "Product"
         links:
         - text: Discover features
-          link: /company
+          link: company
         - text: Why choose our product?
           link: /
         - text: Compare features
