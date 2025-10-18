@@ -1,6 +1,6 @@
 baseURL: http://watashi-ganbare.net/
 languageCode: ja-jp
-title: シンヤの研究
+title: 私の研究
 
 module:
   # uncomment line below for local development of module
@@ -158,28 +158,29 @@ params:
     image: illustrations/mockups/app-mockup.png
     buttonText: Get started
     buttonLink: "#"
-  section4:
-    title: Our Clients love us!
-    subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
-    clients:
-    - name: Irma Walters
-      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-      job: Accountant
-      img: 1
-    - name: John Bradley
-      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-      job: Financial Analyst
-      img: 2
-    - name: Gary Blackman
-      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-      job: HR Manager
-      img: 3
-  section5:
-    title: Drop us a line or two
-    subtitle: We'd love to hear from you
-    buttonText: Send Message
+  # section4:
+  #   title: Our Clients love us!
+  #   subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
+  #   clients:
+  #   - name: Irma Walters
+  #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+  #     job: Accountant
+  #     img: 1
+  #   - name: John Bradley
+  #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+  #     job: Financial Analyst
+  #     img: 2
+  #   - name: Gary Blackman
+  #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+  #     job: HR Manager
+  #     img: 3
+  # section5:
+  #   title: Drop us a line or two
+  #   subtitle: We'd love to hear from you
+  #   buttonText: Send Message
     # action: https://formspree.io/f/<form_id>
     # method: POST
+  # ここより下は有効
   footer:
     # Logo (from static/images/logos/___)
     logo: fresh-white-alt.svg
@@ -187,7 +188,7 @@ params:
     socialmediatitle: Follow Us
     # Social media links (GitHub, Twitter, etc.). All are optional.
     socialmedia:
-    - link: https://github.com/StefMa
+    - link: https://github.com/StartOverFromScratch
       # Icons are from Font Awesome
       icon: github
     - link: https://dribbble.com/#
@@ -204,7 +205,7 @@ params:
         title: "Product"
         links:
         - text: Discover features
-          link: /
+          link: /company
         - text: Why choose our product?
           link: /
         - text: Compare features
