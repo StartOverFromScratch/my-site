@@ -220,10 +220,10 @@ params:
       column1:
         title: "Product"
         links:
-        - text: Discover features
+        - text: About Company
           link: /company
-        - text: Why choose our product?
-          link: /
+        - text: Members
+          link: /members
         - text: Compare features
           link: /
         - text: Our roadmap
