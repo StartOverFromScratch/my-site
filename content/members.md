@@ -1,6 +1,6 @@
 +++
 date = '2025-10-18T19:48:52+09:00'
-draft = true
+draft = false
 title = 'メンバー紹介'
 +++
 
