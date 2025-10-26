@@ -1,0 +1,58 @@
+/* ===========================================
+   記者タグ（reporters taxonomy）色分け
+   - 2パターンをカバー
+     1) <a class="tag" href="/reporters/author1/">author1</a>
+     2) <a href="/reporters/author1/"><span class="tag">author1</span></a>
+   =========================================== */
+
+/* author1 = 緑 */
+a.tag[href*="/reporters/author1"],
+.tags a[href*="/reporters/author1"],
+.tags a[href*="/reporters/author1"] .tag {
+  color: #2e7d32 !important;
+  border-color: #2e7d32 !important;
+  background-color: rgba(46,125,50,0.08) !important;
+}
+
+/* author2 = 青 */
+a.tag[href*="/reporters/author2"],
+.tags a[href*="/reporters/author2"],
+.tags a[href*="/reporters/author2"] .tag {
+  color: #1565c0 !important;
+  border-color: #1565c0 !important;
+  background-color: rgba(21,101,192,0.08) !important;
+}
+
+/* author3 = オレンジ */
+a.tag[href*="/reporters/author3"],
+.tags a[href*="/reporters/author3"],
+.tags a[href*="/reporters/author3"] .tag {
+  color: #ff8f00 !important;
+  border-color: #ff8f00 !important;
+  background-color: rgba(255,143,0,0.08) !important;
+}
+
+/* ===========================================
+   内容タグ（tags taxonomy）色分け（例：英数字スラッグ運用）
+   =========================================== */
+a.tag[href*="/tags/topic-a"],
+.tags a[href*="/tags/topic-a"],
+.tags a[href*="/tags/topic-a"] .tag {
+  color: #7b1fa2 !important;          /* 紫 */
+  border-color: #7b1fa2 !important;
+  background-color: rgba(123,31,162,0.08) !important;
+}
+
+a.tag[href*="/tags/topic-b"],
+.tags a[href*="/tags/topic-b"],
+.tags a[href*="/tags/topic-b"] .tag {
+  color: #00897b !important;          /* ティール */
+  border-color: #00897b !important;
+  background-color: rgba(0,137,123,0.08) !important;
+}
+
+/* 記者チップ（テンプレで .rep-chip を使っている場合の見た目調整。未使用なら無害） */
+.rep-chip {
+  border: 1px solid currentColor;
+  background: transparent;
+}

@@ -2,6 +2,18 @@
 
   {{ partial "single/single.html" . }}
 
+  {{ with .Params.reporters }}
+  <section class="section">
+    <div class="container content">
+      <div class="tags">
+        {{ range . }}
+          <a class="tag rep-chip rep-{{ . | urlize }}" href="{{ (site.GetPage (printf "/reporters/%s" (. | urlize))).Permalink }}">{{ . }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
   {{ if .Params.include_footer }}
   {{ partial "footer.html" . }}
   {{ end }}

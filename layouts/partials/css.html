@@ -21,3 +21,9 @@
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end }}
 <link rel="stylesheet" type="text/css" href="{{ "css/icons.css" | relURL }}">
+
+{{/* Load site-specific custom CSS if present */}}
+{{ with resources.Get "css/custom.css" }}
+  {{ $c := . | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $c.RelPermalink }}">
+{{ end }}
