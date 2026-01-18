@@ -1,8 +1,19 @@
 {{ define "main" }}
+  {{/* derive reporter slug for per-reporter styling */}}
+  {{- $repSlug := "" -}}
+  {{- with .Params.reporters -}}
+    {{- if gt (len .) 0 -}}
+      {{- $repSlug = (index . 0) | urlize -}}
+    {{- end -}}
+  {{- else -}}
+    {{- with .Params.reporter -}}
+      {{- $repSlug = . | urlize -}}
+    {{- end -}}
+  {{- end -}}
 
   {{ partial "single/single.html" . }}
 
-  {{ with .Params.reporters }}
+  <!-- {{ with .Params.reporters }}
   <section class="section">
     <div class="container content">
       <div class="tags">
@@ -12,7 +23,20 @@
       </div>
     </div>
   </section>
+  {{ end }} -->
+
+  {{ with .Params.tags }}
+  <section class="section rep-{{ $repSlug }}">
+    <div class="container content">
+      <div class="tags">
+        {{ range . }}
+          <a class="tag" href="{{ (site.GetPage (printf "/tags/%s" (. | urlize))).Permalink }}">{{ . }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
   {{ end }}
+
 
   {{ if .Params.include_footer }}
   {{ partial "footer.html" . }}
