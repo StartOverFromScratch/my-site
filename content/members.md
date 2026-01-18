@@ -26,7 +26,7 @@ title = 'メンバー紹介'
 
 </div>
 
-<hr>
+<!-- <hr>
 
 <h2 class="title has-text-centered mt-6">参画メンバー</h2>
 
@@ -55,4 +55,4 @@ title = 'メンバー紹介'
   
 </div>
 
-</div>
+</div> -->
