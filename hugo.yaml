@@ -42,7 +42,7 @@ params:
     # Main hero title
     title: 協同学習×看護チームの学びを支える研究ページ
     # Hero subtitle (optional)
-    subtitle: 看護チームの学びに関する情報発信と情報交流の場の提供を通じて、看護チームとそのメンバーの成果を看護の質の向上に貢献します
+    subtitle: 看護チームの学びに関する情報発信と情報共有の場の提供を通じて、看護チームとそのメンバーの成果に貢献し、看護の質の向上に寄与することを目指します
     # Button text
     buttontext: ここを押す
     # Where the main hero button links to
